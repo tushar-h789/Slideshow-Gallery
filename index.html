@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">Slideshow Gallery</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img
+          class="images"
+          src="images/img_5terre_wide.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img
+          class="images"
+          src="images/img_lights_wide.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img
+          class="images"
+          src="images/img_mountains_wide.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img
+          class="images"
+          src="images/img_nature_wide.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img
+          class="images"
+          src="images/img_snow_wide.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img
+          class="images"
+          src="images/img_woods_wide.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- thamblain images -->
+
+      <div class="row">
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images/img_5terre_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(1)"
+            alt="The Woods"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images/img_lights_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(2)"
+            alt="Cinque Terre"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images/img_mountains_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(3)"
+            alt="Mountains and fjords"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images/img_nature_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(4)"
+            alt="Northern Lights"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images/img_snow_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(5)"
+            alt="Nature and sunrise"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images/img_woods_wide.jpg"
+            style="width: 100%"
+            onclick="currentSlide(6)"
+            alt="Snowy Mountains"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /*
+// Slide Show Gallery start
+let slideIndex = 1;
+
+// show default as first image
+showsSlides(slideIndex);
+
+// // prev next btn control
+// function plusSlides(n) {
+//   showsSlides((slideIndex += n));
+// }
+
+// // thumbnail and dots images control
+// function currentSlide(n) {
+//   showsSlides((slideIndex = n));
+// }
+
+function showsSlides(n) {
+  let slides = document.querySelectorAll(".mySlides");
+  let slideArr = Array.from(slides);
+
+  let thumbImg = document.querySelectorAll(".thumbImg");
+  let thumbArr = Array.from(thumbImg);
+
+  let indexNum = document.querySelectorAll(".indexNum");
+  let indexNumArr = Array.from(indexNum);
+
+  let dots = document.querySelectorAll(".dots");
+  let dotsArr = Array.from(dots);
+
+  let caption = document.querySelector("#caption");
+
+  if (n < 1) {
+    slideIndex = slideArr.length;
+  }
+  if (n > slideArr.length) {
+    slideIndex = 1;
+  }
+
+  slideArr.map((slideitems) => {
+    slideitems.style.display = "none";
+  });
+
+  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.add("slide-anim");
+
+  thumbArr.map((thumbItems) => {
+    thumbItems.className = thumbItems.className.replace(" active", "");
+  });
+  thumbArr[slideIndex - 1].className += " active";
+
+  // Caption text changing
+  caption.innerHTML = thumbArr[slideIndex - 1].alt;
+
+  // dinamic index number
+  indexNumArr.map((indexnumItems) => {
+    indexnumItems.textContent = slideIndex;
+  });
+  // dot active
+  dotsArr.map((dotItems) => {
+    dotItems.className = dotItems.className.replace(" active", "");
+  });
+  dotsArr[slideIndex - 1].className += " active";
+}
+
+// // keyboard handler start
+// // next
+document.addEventListener("keydown", (e) => {
+  if (e.key == "ArrowRight") {
+    plusSlides(1);
+  }
+});
+// prev
+document.addEventListener("keydown", (e) => {
+  if (e.key == "ArrowLeft") {
+    plusSlides(-1);
+  }
+});
+
+// autoplay option
+// if you dont want auto play option just dont copy this
+setInterval(() => {
+ plusSlides(1);
+}, 2500);
+
+// Slide Show Gallery end
+*/
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
